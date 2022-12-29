@@ -1,0 +1,47 @@
+<div class="main__container">
+    <div class="main__form">
+        <div class="main__header">
+            <h2>Create Account</h2>
+        </div>
+        <form class="form" [formGroup]="registrationForm">
+            <div [ngClass]="getClass(name)">
+                <label>Username</label>
+                <input type="text" placeholder="Input username" formControlName="name">
+                <img src="../../../../../assets/img/success_icon.svg" alt="" class="icon__success">
+                <img src="../../../../../assets/img/error_icon.svg" alt="" class="icon__error">
+                <small *ngIf="formErrors.nameErrors">{{formErrors.nameErrors}}</small>
+            </div>
+
+            <div [ngClass]="getClass(email)">
+                <label>Email</label>
+                <input type="email" placeholder="Input email" formControlName="email">
+                <img src="../../../../../assets/img/success_icon.svg" alt="" class="icon__success">
+                <img src="../../../../../assets/img/error_icon.svg" alt="" class="icon__error">
+                <small *ngIf="formErrors.emailErrors">{{formErrors.emailErrors}}</small>
+            </div>
+
+            <div [ngClass]="getClass(password)">
+                <label>Password</label>
+                <input type="password" placeholder="Input password" formControlName="password">
+                <img src="../../../../../assets/img/success_icon.svg" alt="" class="icon__success">
+                <img src="../../../../../assets/img/error_icon.svg" alt="" class="icon__error">
+                <small *ngIf="formErrors.passErrors">{{formErrors.passErrors}}</small>
+            </div>
+
+            <div [ngClass]="getClass(confirmPassword)">
+                <label>Check password</label>
+                <input type="password" placeholder="Check password" formControlName="confirmPassword">
+                <img src="../../../../../assets/img/success_icon.svg" alt="" class="icon__success">
+                <img src="../../../../../assets/img/error_icon.svg" alt="" class="icon__error">
+                <div *ngIf="registrationForm.errors">
+                    <small *ngIf="registrationForm.errors['match']">Password doesn't match. </small>
+                </div>
+            </div>
+            <button class="form__button" (click)="signup()">Submit</button>
+        </form>
+        <div class="main__account">
+            <p>Already have account?</p>
+            <a href="/signin" class="main__link">Sign in</a>
+        </div>
+    </div>
+</div>

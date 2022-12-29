@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1VpZW7b3CbO57aiVQy+U7Mu06mTcYWC3Z96/NjTB1HE=",
+  "Source": "PL.WebApi",
+  "BasePath": "_content/PL.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

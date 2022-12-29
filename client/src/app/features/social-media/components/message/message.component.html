@@ -1,0 +1,31 @@
+<section class="item" [ngClass]="currentUser === message.userName ? 'sender' : ''" *ngIf="isDeletedForUser()">
+  <div class="item__container">
+      <div class="item__right">
+        <div class="item__avatar">
+            <p>{{message.userName}}</p>
+        </div>
+        <div class="item__time">
+            {{message.createdAt | date:'shortTime'}}
+        </div>
+      </div>
+      <div class="item__left">
+        <div class="item__content">
+            <div class="item__replied" *ngIf="message.parentMessage">
+                Replied - {{message.parentMessage}}
+            </div>
+            <div class="item__message">
+                {{message.text}} <p *ngIf="message.updatedAt">Edited</p>
+            </div>
+        </div>
+        <div class="item__more">
+          <div class="dropdown-content">
+            <a *ngIf="currentUser === message.userName"
+            (click)="editMessage()">Edit</a>
+            <a (click)="replyMessage()">Reply</a>
+            <a (click)="deleteMessage()">Delete</a>
+            <a (click)="deleteForUserMessage()">Delete for me</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>

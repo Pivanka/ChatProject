@@ -1,0 +1,20 @@
+
+<div class="container">
+  <button (click)="addNewGroup()">Add new group</button>
+<div class="groups">
+  Your Groups
+  <div *ngFor="let item of userGroups">
+    <app-group-item [group]="item"></app-group-item>
+  </div>
+  <div class="message" *ngIf="userGroups === undefined || !userGroups.length">
+    You have not any group..
+  </div>
+  All Groups
+  <div *ngFor="let item of groups">
+    <app-group-item [group]="item"></app-group-item>
+  </div>
+  <div class="message" *ngIf="groups === undefined || !groups.length">
+    There is no one group. Please create new..
+  </div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="header__content">
+    <div class="header__logo">
+        <img src="../../assets/img/chat_logo.svg" alt="">
+        <p>ChatONLINE</p>
+    </div>
+    <div class="header__menu">
+        <ul class="menu__list">
+          <li>
+            <a routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            class="menu__link">Home</a>
+          </li>
+            <li *ngIf='isLoggedIn'>
+                <a routerLink="/social-media"
+                routerLinkActive="active"
+                class="menu__link">Chat</a>
+            </li>
+            <li *ngIf='isLoggedIn' class="account">
+                <a class="menu__link"
+                >Welcome, {{getName}}</a>
+                  <div class="dropdown-content">
+                      <a class="menu__link"
+                      routerLink="/profile"
+                      >Profile</a>
+                      <a routerLink="/signin"
+                      class="menu__link"
+                      (click)="logout()">Logout</a>
+                  </div>
+            </li>
+            <li *ngIf='!isLoggedIn'>
+                <a
+                routerLink="/signin"
+                routerLinkActive="active"
+                class="menu__link">Login</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</header>

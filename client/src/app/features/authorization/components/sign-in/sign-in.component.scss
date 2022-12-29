@@ -1,0 +1,103 @@
+.login__form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px;
+    overflow: hidden;
+    width: 700px;
+}
+
+.login__header {
+    padding: 20px;
+    border-bottom: 1px solid #e8f0ff;
+    & h2{
+        text-align: center;
+        font-size: 20px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+}
+.form {
+    padding: 20px;
+    & button{
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        width: 100%;
+        background-color: #2B8F78;
+        color: white;
+        padding: 15px;
+        border-radius: 25px;
+        font-size: 15px;
+        line-height: 15px;
+        &:hover{
+            background-color: #206656;
+        }
+    }
+}
+
+.form-control {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    & input{
+        padding: 5px;
+        height: 45px;
+        border-radius: 25px;
+        outline: none;
+		width: 100%;
+        background-color: #e8f0ff;
+        font-size: 14px;
+        padding-left: 15px;
+        &:focus{
+            color: #2B8F78;
+        }
+    }
+    & label{
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 10px;
+        font-weight: 600;
+        padding-left: 15px;
+    }
+    & img {
+        visibility: hidden;
+        position: absolute;
+        display: inline-block;
+        width: 20px;
+        top: 34px;
+        right: 10px;
+    }
+    & small{
+        padding-left: 15px;
+        visibility: hidden;
+        position:absolute ;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.form-control.success{
+    & input{
+        border: 1px solid #2B8F78;
+    }
+    & img.icon__success{
+        visibility: visible;
+    }
+}
+
+.form-control.error{
+    & input{
+        border: 1px solid #ff0000;
+    }
+    & img.icon__error{
+        visibility: visible;
+    }
+    & small{
+        visibility: visible;
+        color: #ff0000;
+    }
+}

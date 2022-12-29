@@ -1,0 +1,36 @@
+<main class="main">
+  <div class="main__container">
+      <div class="content">
+          <section class="first">
+              <div class="first__content">
+                <div class="first__search">
+                  <button type="submit" class="first__button"></button>
+                  <input type="text"
+                  class="first__input"
+                  placeholder="Search"
+                  [(ngModel)]="filterBy"
+                  (keyup)="filter()"/>
+                </div>
+                  <div class="first__groups groups">
+                    <div *ngFor="let item of groups">
+                      <app-group [group]="item" (click)="getGroupId()"></app-group>
+                    </div>
+                    <div class="message" *ngIf="this.groups === undefined || !this.groups.length">
+                      There is no one groups..
+                    </div>
+                  </div>
+              </div>
+          </section>
+          <section class="second">
+            <app-group-chat *ngIf="groupId"
+            [messages]="messages"
+            [groupId]="groupId"
+            [groupName]="groupName"
+            (messageEvent)="getChat()"></app-group-chat>
+            <div class="message" *ngIf="!groupId">
+              Open the group..
+            </div>
+          </section>
+      </div>
+  </div>
+</main>

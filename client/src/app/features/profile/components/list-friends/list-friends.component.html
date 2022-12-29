@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="users">
+    Friends
+    <div *ngFor="let item of friends">
+      <app-user-item [user]="item"
+      [isFriend]="true"
+      (deleteFriendEvent)="deleteFriendHandler()"
+      (addFriendEvent)="getFriends(userEmail)"></app-user-item>
+    </div>
+    <div class="message" *ngIf="friends === undefined || !friends.length">
+      You have not any friend.. Please add someone..
+    </div>
+  </div>
+
+  <div class="users" *ngIf="friends">
+    Users
+    <div *ngFor="let item of users">
+      <app-user-item [user]="item"
+      [isFriend]="isFriend(item)"
+      (addFriendEvent)="getFriends(userEmail)"
+      (deleteFriendEvent)="deleteFriendHandler()"></app-user-item>
+    </div>
+  </div>
+</div>

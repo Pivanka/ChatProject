@@ -1,0 +1,51 @@
+.user{
+  &__item{
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e8f0ff;
+      margin: 5px;
+      padding: 10px 10px 10px 5px;
+  }
+  &__main{
+      padding-left: 5px;
+  }
+  &__name{
+      font-size: 15px;
+  }
+  &__text{
+      font-size: 10px;
+  }
+  &__avatar{
+      background-color: #2B8F78;
+      border-radius: 50px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      & p{
+        font-size: 0;
+          padding-top: 10px;
+          color: #ffffff;
+          &::first-letter{
+            font-size: 20px;
+          }
+      }
+  }
+}
+.actions{
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  background-color: #e8f0ff;
+  color: rgb(34, 34, 34);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+  line-height: 15px;
+  &:hover{
+      background-color: #38304d;
+      color: white;
+  }
+}

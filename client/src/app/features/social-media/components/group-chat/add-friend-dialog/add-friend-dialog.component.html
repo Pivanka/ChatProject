@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Adding friends</h2>
+<mat-dialog-content class="dialog">
+  <form class="form" [formGroup]="groupForm">
+    <div class="form-control">
+        <mat-selection-list formControlName="users" #selectedFriends>
+          <mat-list-option *ngFor="let friend of friends" [value]="friend">
+            {{friend.userName}}
+          </mat-list-option>
+        </mat-selection-list>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end" >
+  <button mat-dialog-close>Cancel</button>
+  <button [mat-dialog-close]="users.value" cdkFocusInitial>Add</button>
+</mat-dialog-actions>

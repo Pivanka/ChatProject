@@ -1,0 +1,123 @@
+.first__content {
+  padding-right: 15px;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+}
+
+.first {
+  &__search {
+      display: flex;
+      justify-content: space-around;
+  }
+  &__input {
+      border-left: none;
+      padding: 5px;
+      height: 45px;
+      border-radius: 0 25px 25px 0;
+      outline: none;
+  width: 100%;
+      &:focus{
+          color: #2B8F78;
+      }
+  }
+  &__button {
+      width: 40px;
+      height: 45px;
+      background-color: white;
+      text-align: center;
+      border-radius: 25px 0 0 25px;
+      cursor: pointer;
+      font-size: 20px;
+      background-image: url(../../../../assets/img/search_icon.svg);
+      background-size: 17px;
+    background-repeat: no-repeat;
+      background-position: center;
+  }
+  &__groups{
+      margin-top: 15px;
+      background-color: white;
+      border-radius: 25px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+.message{
+  margin-top: 15px;
+  padding: 0px 10px;
+  font-size: 14px;
+  line-height: 1.2;
+  opacity: 0.7;
+}
+
+.second {
+  width: 600px;
+  height: 500px;
+  background-color: white;
+  border-radius: 25px;
+  &__info{
+      margin: 15px;
+  }
+  &__chat {
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: 350px;
+      margin: 15px;
+      flex: 1;
+  }
+  &__type{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 15px;
+  }
+  &_input{
+      background-color: #e8f0ff;
+      padding: 5px;
+      height: 50px;
+      border-radius: 25px;
+  width: 90%;
+      padding-left: 15px;
+      &:focus{
+          color: #2B8F78;
+      }
+  }
+  &__button {
+      width: 40px;
+      height: 40px;
+      background-color: #2B8F78;
+      border-radius: 50px;
+      cursor: pointer;
+      background-image: url(./../../../../assets/img/send__icon.svg);
+      background-size: 20px;
+    background-repeat: no-repeat;
+      background-position: center;
+
+  }
+}
+.second__content {
+  overflow: hidden;
+}
+
+.second__main{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.active{
+  background-color: #2B8F78;
+  border-radius: 30px;
+}
+
+.second{
+  width: 600px;
+  height: 500px;
+  background-color: white;
+  border-radius: 25px;
+}

@@ -1,0 +1,25 @@
+<div class="main__container">
+  <div class="main__form">
+      <div class="main__header">
+          <h2>Create new group</h2>
+      </div>
+      <form class="form" [formGroup]="groupForm">
+          <div class="form-control">
+              <label>Group Name</label>
+              <input type="text" placeholder="Input name" formControlName="name">
+          </div>
+          <div class="form-control">
+              <label>Choose friends</label>
+              <mat-selection-list formControlName="users" #selectedFriends>
+                <mat-list-option *ngFor="let friend of friends" [value]="friend">
+                  {{friend.userName}}
+                </mat-list-option>
+              </mat-selection-list>
+          </div>
+          <button class="form__button" (click)="createGroup()">Create</button>
+      </form>
+      <div class="main__back">
+        <button (click)="back()">Back</button>
+      </div>
+  </div>
+</div>

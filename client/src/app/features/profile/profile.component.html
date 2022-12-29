@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="row__profile profile" *ngIf="user">
+    <div class="profile__wrapper">
+      <div class="profile__img">
+        <p>{{user.userName}}</p>
+      </div>
+    </div>
+    <div class="profile__body">
+      <p>Nickname - <span>{{user.userName}}</span></p>
+      <p>Email - <span>{{user.email}}</span></p>
+    </div>
+  </div>
+  <div class="row__menu">
+    <ul class="menu__list">
+      <li>
+          <a class="menu__link"
+          routerLink="/profile/groups"
+          routerLinkActive="active"
+          >Groups</a>
+      </li>
+      <li>
+          <a class="menu__link"
+          routerLink="/profile/friends"
+          routerLinkActive="active"
+          >Friends</a>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
+</div>

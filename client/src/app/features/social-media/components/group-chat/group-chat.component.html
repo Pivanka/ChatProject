@@ -1,0 +1,37 @@
+<section class="second">
+
+  <div class="second__content">
+      <div class="second__info">
+          <div class="second__name">
+              {{groupName}}
+          </div>
+          <div class="second__settings">
+            <button class="second__more">More</button>
+            <div class="second__dropdown-content">
+              <a (click)="openDialog()">Add friend</a>
+              <a (click)="openInfo()">Members</a>
+            </div>
+          </div>
+      </div>
+      <div class="second__main">
+          <div class="second__main-chat">
+            <div class="second__chat"
+            [ngStyle]="{'align-self': currentUser === item.userName ? 'flex-end' : 'flex-start'}"
+            *ngFor="let item of messages">
+              <app-message [message]="item"
+               (messageDeleteEvent)="deleteMessage($event)"
+               (messageDeleteForUserEvent)="deleteForUserMessage($event)"
+               (messageReplyEvent)="replyMessageHandler($event)"
+               (messageEditEvent)="editMessageHandler($event)"></app-message>
+            </div>
+          </div>
+          <form class="second__type" [formGroup]="messageForm">
+              <input type="text" class="second_input"
+               placeholder="Type a message"
+               formControlName="newMessage"
+               id="newMessage">
+              <button class="second__button" (click)="submit()"></button>
+          </form>
+      </div>
+  </div>
+</section>

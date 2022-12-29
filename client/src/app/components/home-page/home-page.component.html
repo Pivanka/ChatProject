@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="home" *ngIf="isLoggedIn">
+    <p>Welcome back</p>
+    <button class="btn" (click)="goToChat()">Go to chat</button>
+  </div>
+  <div class="home" *ngIf="!isLoggedIn">
+    <p>Get Started</p>
+    <div class="buttons">
+      <button (click)="goToLogin()">Login</button>
+      <button (click)="goToRegister()">Register</button>
+    </div>
+  </div>
+</div>

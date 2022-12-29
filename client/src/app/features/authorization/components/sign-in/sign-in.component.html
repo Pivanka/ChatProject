@@ -1,0 +1,31 @@
+<main class="login">
+    <div class="login__container">
+        <div class="login__form">
+            <div class="login__header">
+                <h2>Log in</h2>
+            </div>
+            <form class="form" [formGroup]="loginForm">
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="email" placeholder="Input email" formControlName="email">
+                    <img src="../../../../../assets/img/success_icon.svg" alt="" class="icon__success">
+                    <img src="../../../../../assets/img/error_icon.svg" alt="" class="icon__error">
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-control">
+                    <label>Password</label>
+                    <input type="password" placeholder="Input password" formControlName="password">
+                    <img src="../../../../../assets/img/success_icon.svg" alt="" class="icon__success">
+                    <img src="../../../../../assets/img/error_icon.svg" alt="" class="icon__error">
+                    <small>Error message</small>
+                </div>
+                <button class="form__button" (click)="login()">Log in</button>
+            </form>
+            <div class="main__account">
+                <p>Already haven't account?</p>
+                <a href="/signup" class="main__link">Sign up</a>
+            </div>
+        </div>
+    </div>
+</main>

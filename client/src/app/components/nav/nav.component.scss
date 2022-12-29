@@ -1,0 +1,38 @@
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 40px;
+    & p{
+        padding-left: 10px;
+        letter-spacing: 1.5px;
+        font-size: 18px;
+        font-weight: 600;
+        user-select: none;
+    }
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    li{
+        padding: 0px 15px 0px 0px;
+    }
+    li:last-child{
+        padding: 0px;
+    }
+    & > li{
+        margin: 0px 0px 0px 20px;
+    }
+}

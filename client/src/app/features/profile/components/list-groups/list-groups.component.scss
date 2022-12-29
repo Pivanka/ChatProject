@@ -1,0 +1,21 @@
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  background-color: #e8f0ff;
+  color: rgb(34, 34, 34);
+  padding: 10px 20px;
+  margin: 10px 60px;
+  border-radius: 25px;
+  font-size: 15px;
+  line-height: 15px;
+  &:hover{
+      background-color: #38304d;
+      color: white;
+  }
+}
+
+.container{
+  height: 90%;
+  overflow: auto;
+}
+

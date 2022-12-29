@@ -1,0 +1,16 @@
+<div class="item">
+  <div class="user__item">
+    <div class="user__avatar">
+        <p>{{user.userName}}</p>
+    </div>
+    <div class="user__main">
+        <div class="user__name">
+            {{user.userName}}
+        </div>
+    </div>
+  </div>
+  <div class="actions">
+    <button *ngIf="!isFriend" (click)="addFriend(user.email)">Add Friend</button>
+    <button *ngIf="isFriend" (click)="deleteFriend(user.email)">Delete Friend</button>
+  </div>
+</div>
